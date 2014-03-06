@@ -19,10 +19,10 @@ Each level in *NOCTURNAL* is actually two levels, one in which the physical obje
 
 
 Concept - *NOCTURNAL Day*
-![alt text](https://raw.github.com/keiranlovett/Nocturnal/master/References/concept_day.jpg "Nocturnal Day")
+![alt text](https://raw.github.com/keiranlovett/Nocturnal/master/References/concept_day.png "Nocturnal Day")
 
 Concept - *NOCTURNAL Night*
-![alt text](https://raw.github.com/keiranlovett/Nocturnal/master/References/concept_night.jpg  "Nocturnal Day")
+![alt text](https://raw.github.com/keiranlovett/Nocturnal/master/References/concept_night.png "Nocturnal Day")
 
 ### Game structure
 
