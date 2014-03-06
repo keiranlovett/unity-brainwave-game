@@ -83,11 +83,11 @@ public class stateController : MonoBehaviour {
 		}
 
 		//If Night MODE
-		/*if(state == true) {
+		if(state == true) {
 			dayMode();
 		} else {
 			nightMode();
-		}*/
+		}
 
 	}
 
@@ -120,11 +120,13 @@ public class stateController : MonoBehaviour {
 		foreach( GameObject go in objects )
 		{
 			go.renderer.enabled = true;
+			go.collider.enabled=true;
 		}
 		GameObject[] objects2 = GameObject.FindGameObjectsWithTag( "Night" );
 		foreach( GameObject go in objects2 )
 		{
 			go.renderer.enabled = false;
+			go.collider.enabled=false;
 		}
 	}
 
@@ -133,11 +135,13 @@ public class stateController : MonoBehaviour {
 		foreach( GameObject go in objects )
 		{
 			go.renderer.enabled = false;
+			go.collider.enabled=false;
 		}
 		GameObject[] objects2 = GameObject.FindGameObjectsWithTag( "Night" );
 		foreach( GameObject go in objects2 )
 		{
 			go.renderer.enabled = true;
+			go.collider.enabled=true;
 		}
 	}
 
