@@ -987,10 +987,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 384779021}
   - 20: {fileID: 384779020}
-  - 124: {fileID: 384779019}
   - 92: {fileID: 384779018}
-  - 81: {fileID: 384779017}
-  - 114: {fileID: 384779016}
   m_Layer: 0
   m_Name: Gui Camera
   m_TagString: Untagged
@@ -998,32 +995,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &384779016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 384779015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdce53c5613b2814c801918108ac1819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!81 &384779017
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 384779015}
-  m_Enabled: 1
 --- !u!92 &384779018
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 384779015}
-  m_Enabled: 1
---- !u!124 &384779019
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
