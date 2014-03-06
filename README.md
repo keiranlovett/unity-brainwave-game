@@ -1,4 +1,3 @@
-
 # Nocturnal
 ## GAME DESIGN DOCUMENT
 
@@ -20,9 +19,10 @@ Each level in *NOCTURNAL* is actually two levels, one in which the physical obje
 
 
 Concept - *NOCTURNAL Day*
-
+![alt text](https://github.com/keiranlovett/Nocturnal/raw/master/References/concept_day.png "Nocturnal Day")
 
 Concept - *NOCTURNAL Night*
+![alt text](https://github.com/keiranlovett/Nocturnal/raw/master/References/concept_night.png "Nocturnal Day")
 
 ### Game structure
 
@@ -84,7 +84,7 @@ NOCTURNAL is designed to be played on the Android and iOS devices primarily for 
 
 The BRAINLINK brainwave sensor is a required component for the game as core gameplay mechanics are built around the devices unique outputs. Using the devices API the game and smartphones will communicate with the BRAINLINK brainwave sensor via Bluetooth.
 
-![image alt text](image_2.jpg)*Provided by Macrotellect*
+![alt text](https://github.com/keiranlovett/Nocturnal/raw/master/References/concept_chart.png "Nocturnal Concept")
 
 ### Players & Target Audience
 
