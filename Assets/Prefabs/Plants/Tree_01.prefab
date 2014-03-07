@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 95: {fileID: 9500000}
   m_Layer: 0
   m_Name: Tree_01
   m_TagString: Untagged
@@ -41,7 +40,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 457a45a4779fa094fb7e9e3562188635, type: 2}
+  - {fileID: 2100000, guid: 3c64d758fc7d93f41a3582bd10d3ee63, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

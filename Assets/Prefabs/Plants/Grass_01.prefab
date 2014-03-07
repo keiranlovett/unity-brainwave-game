@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 95: {fileID: 9500000}
   m_Layer: 0
   m_Name: Grass_01
   m_TagString: Untagged
@@ -41,7 +40,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cc26b1bb12d5ee94a9aad1a0bfc96a26, type: 2}
+  - {fileID: 2100000, guid: ef9d4486cd040e344b9b9f09027da027, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

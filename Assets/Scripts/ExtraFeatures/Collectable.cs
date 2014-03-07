@@ -13,12 +13,13 @@ public class Collectable : MonoBehaviour {
 	/// For example see the coin in the Mario demo.
 	/// </summary>
 	public Renderer myRenderer;
+	public bool levelComplete;
 
 	/// <summary>
 	/// The particle system to play on hit.
 	/// </summary>
 	public ParticleSystem particles;
-
+	
 	void OnTriggerEnter(Collider other) {
 		HitBox collector = other.gameObject.GetComponent<HitBox>();
 		if (collector != null) {
@@ -30,6 +31,15 @@ public class Collectable : MonoBehaviour {
 			if (myRenderer.collider != null) myRenderer.collider.enabled = false;
 			if (myRenderer.rigidbody != null) myRenderer.rigidbody.useGravity = false;
 			collider.enabled = false;
+
+			StartCoroutine(loadLevel());
 		}
 	}
+
+	public IEnumerator loadLevel() {
+		yield return new WaitForSeconds(3f); // waits 3 seconds
+		//Set the level to complete after three seconds.
+		levelComplete = true;
+	}
+
 }
