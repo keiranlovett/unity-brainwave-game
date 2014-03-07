@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class stateController : MonoBehaviour {
 
@@ -13,6 +14,8 @@ public class stateController : MonoBehaviour {
 	private float delta1;
 
 	public bool toggle;
+	public float health = 1.0f;
+
 
 	// Use this for initialization
 	void Start () {
@@ -60,6 +63,12 @@ public class stateController : MonoBehaviour {
 				dayMode();
 			}
 		}
+
+		// Clamp ratio between 0.0 and 1.0
+		if (health < 0.0f) health = 0.0f;
+		if (health > 1.0f) health = 1.0f;
+		
+		GameObject.Find("Bar").renderer.material.SetFloat("_Health", health);
 
 
 	}
