@@ -16,11 +16,10 @@ public class stateController : MonoBehaviour {
 	private int meditation1;
 	private float delta1;
 
-	public bool state;
+	public bool toggle;
 
 	// Use this for initialization
 	void Start () {
-		state = false;
 
 		controller = GameObject.Find("ThinkGear").GetComponent<TGDeviceController>();
 		
@@ -67,27 +66,26 @@ public class stateController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//If Night MODE
-		if(state == true) {
-			dayMode();
-		} else {
-			nightMode();
+
+		if (Input.GetKeyDown("space")) {
+			toggle = !toggle;
 		}
 
-		//Now for some ThinkGear jumping
-		if(attention1 >= 65 && attention1 < 275)
+		//Now for some ThinkGear SPICE
+		if((attention1 >= 65 && attention1 < 275) && toggle)
 		{	
-			dayMode();
-		} else {
 			nightMode();
+		} else {
+			if (toggle) {
+				print("Toggled ON");
+				nightMode();
+			}
+			else {
+				print("Toggled OFF");
+				dayMode();
+			}
 		}
 
-		//If Night MODE
-		if(state == true) {
-			dayMode();
-		} else {
-			nightMode();
-		}
 
 	}
 
@@ -110,7 +108,7 @@ public class stateController : MonoBehaviour {
 		GUILayout.Label("Deviced Connected" + poorSignal1);
 		GUILayout.Label("Lets keep focused" + attention1);
 		GUILayout.Label("Relax grasshopper" + meditation1);
-		GUILayout.Label("Deviced Connected" + delta1);
+		//GUILayout.Label("Deviced Connected" + delta1);
 		
 	}
 

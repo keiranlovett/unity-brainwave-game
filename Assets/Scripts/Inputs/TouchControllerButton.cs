@@ -44,6 +44,7 @@ public enum TouchControllerButtonType {
 	UP,
 	DOWN,
 	RUN,
-	JUMP
+	JUMP,
+	CHEAT
 	// Add new types here for other buttons
 }
