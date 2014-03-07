@@ -3,11 +3,7 @@ using System.Collections;
 
 public class stateController : MonoBehaviour {
 
-	public Texture2D[] signalIcons;
-	
-	private float indexSignalIcons = 1;					//These three variables are for setting the animation for signalIcons
-	private bool enableAnimation = false;				//This is actually very useful for letting the player know that the device is connected
-	private float animationInterval = 0.0f;
+
 	
 	TGDeviceController controller; 						//Lets call on the ThinkGear Controller class
 	
@@ -23,33 +19,12 @@ public class stateController : MonoBehaviour {
 
 		controller = GameObject.Find("ThinkGear").GetComponent<TGDeviceController>();
 		
-		controller.UpdatePoorSignal1Event += OnUpdatePoorSignal;
 		controller.UpdateAttention1Event += OnUpdateAttention;
 		controller.UpdateMeditation1Event += OnUpdateMeditation;
 		controller.UpdateDelta1Event += OnUpdateDelta;
 
 	}
 
-	void OnUpdatePoorSignal(int pSig1)					//Might actually want to instantiate a new name for value.
-	{
-		poorSignal1 = pSig1;
-		
-		if(pSig1 < 25)
-		{
-			indexSignalIcons = 0;
-			enableAnimation = false;
-		}
-		else if(pSig1 >= 25 && pSig1 < 275 && !enableAnimation)
-		{
-			indexSignalIcons = 2;
-			enableAnimation = true;
-		}
-		else if(pSig1 >= 175)
-		{
-			indexSignalIcons = 1;
-			enableAnimation = false;
-		}
-	}
 	void OnUpdateAttention(int a1)
 	{
 		attention1 = a1;
@@ -90,17 +65,7 @@ public class stateController : MonoBehaviour {
 	}
 
 	
-	void FixedUpdate()
-	{
-		if (enableAnimation)
-		{
-			if (indexSignalIcons >= 4.8)
-			{
-				indexSignalIcons = 2;
-			}
-			indexSignalIcons += animationInterval;
-		}
-	}
+
 	
 	//Them buttons
 	void OnGui()

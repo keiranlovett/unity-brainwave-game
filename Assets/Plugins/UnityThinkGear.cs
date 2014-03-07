@@ -5,9 +5,10 @@ using System;
 public class UnityThinkGear
 {
     /*
+    
     Following are connection status that declared in UnityThinkGear2User.Jar
     when you getConnectStatex(),the return value will be one of following string
-     *
+    	* 
 	public static final String STATE_IDLE = "idle";
 	public static final String STATE_CONNECTING = "connecting";
 	public static final String STATE_CONNECTED = "connected";
@@ -19,15 +20,14 @@ public class UnityThinkGear
 
 	public String connectState1 = STATE_IDLE;
 	public String connectState2 = STATE_IDLE;
-	*/
+     */
     private AndroidJavaClass jc;
     private AndroidJavaObject jo;
 	
 	private static UnityThinkGear thinkGear = null;
 
 	
-	private UnityThinkGear()
-	{
+	private UnityThinkGear(){
 		jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         jo = jc.GetStatic<AndroidJavaObject>("currentActivity");
 	}
@@ -35,10 +35,8 @@ public class UnityThinkGear
 	/**
 	 * Singleton
 	 **/
-	public static UnityThinkGear getInstance()
-	{
-		if(thinkGear == null)
-		{
+	public static UnityThinkGear getInstance(){
+		if(thinkGear == null){
 			thinkGear = new UnityThinkGear();
 		}
 		return thinkGear;
@@ -58,7 +56,7 @@ public class UnityThinkGear
 	 * otherwise,set to false.
 	 * default is false.
 	 **/
-	public void setSendEEGEnable(bool value = true)
+	public void setSendEEGEnable(bool value)
     {
         jo.Set<bool>("sendEEGEnable", value);
     }
