@@ -100,7 +100,7 @@ public class LadderWizardEditorWindow : EditorWindow {
 				TopStepPlatform topStep = topStepGo.AddComponent<TopStepPlatform>();
 				BoxCollider topStepCollider = topStepGo.AddComponent<BoxCollider>();
 				topStep.control = control;
-				topStepCollider.extents = new Vector3(ladderWidth / 2.0f,  stepSize / 2.0f, 0.5f);
+				topStepCollider.size = new Vector3(ladderWidth / 2.0f,  stepSize / 2.0f, 0.5f);
 				topStep.transform.parent = ladderGo.transform;
 				topStep.transform.localPosition = new Vector3(0, -1 * (stepSize / 2.0f), 0);
 			} else {
@@ -117,7 +117,7 @@ public class LadderWizardEditorWindow : EditorWindow {
 				LadderCollider step = stepGo.AddComponent<LadderCollider>();
 				BoxCollider stepCollider = stepGo.AddComponent<BoxCollider>();
 				step.control = control;
-				stepCollider.extents = new Vector3(ladderWidth / 2.0f ,  stepSize / 2.0f, 0.5f);
+				stepCollider.size = new Vector3(ladderWidth / 2.0f ,  stepSize / 2.0f, 0.5f);
 				step.transform.parent = ladderGo.transform;
 				step.transform.localPosition = new Vector3(0, (-1 * count * stepDistance) + (stepSize / 2.0f) + (useLadderTop ? ladderTopDistance : 0), 0);
 				

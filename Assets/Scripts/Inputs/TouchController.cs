@@ -141,7 +141,7 @@ public class TouchController: RaycastCharacterInput {
 				break;
 			case TouchControllerButtonType.CHEAT:
 				if (touch.phase == TouchPhase.Began) 
-				GameObject.Find("_StateController").GetComponent<stateController>().toggle = !GameObject.Find("_StateController").GetComponent<stateController>().toggle; // toggles onoff at each click
+				GameObject.Find("GameController").GetComponent<GameManager>().toggle = !GameObject.Find("GameController").GetComponent<GameManager>().toggle; // toggles onoff at each click
 			break;
 		}
 	}

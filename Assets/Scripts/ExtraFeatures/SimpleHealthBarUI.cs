@@ -33,7 +33,7 @@ public class SimpleHealthBarUI : MonoBehaviour {
 #if UNITY_4_0 || UNITY_4_1
 		visibleContents.SetActive(false);
 #else
-		visibleContents.SetActiveRecursively(false);
+		visibleContents.SetActive(false);
 #endif
 	}
 	virtual public void AnimateHealthChange(float from, float to) {
@@ -47,7 +47,7 @@ public class SimpleHealthBarUI : MonoBehaviour {
 #if UNITY_4_0 || UNITY_4_1
 		visibleContents.SetActive(true);
 #else
-		visibleContents.SetActiveRecursively(true);
+		visibleContents.SetActive(true);
 #endif
 		float t = 0;
 		while (healthBar.localScale.x > to) {
@@ -63,7 +63,7 @@ public class SimpleHealthBarUI : MonoBehaviour {
 #if UNITY_4_0 || UNITY_4_1
 		visibleContents.SetActive(true);
 #else
-		visibleContents.SetActiveRecursively(false);
+		visibleContents.SetActive(false);
 #endif
 	}
 }
