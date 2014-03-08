@@ -202,6 +202,14 @@ The game is designed to be extremely forgiving, in part to counter the difficult
 </table>
 
 
+# Build Progress 
+
+![alt text](https://raw.github.com/keiranlovett/Nocturnal/master/References/build_day.png "Day - Build 1.1.11")
+
+![alt text](https://raw.github.com/keiranlovett/Nocturnal/master/References/build_night.png "Night - Build 1.1.11")
+
+![alt text](https://raw.github.com/keiranlovett/Nocturnal/master/References/build_concept.png "Build 1.1.21")
+
 # Design Approach 
 
 Nocturnal is developed with the Top-Down Development approach, with ideas and concepts shaping the overall medium.
