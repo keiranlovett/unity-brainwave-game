@@ -92,8 +92,12 @@ public class DisplayData : MonoBehaviour
             controller.Disconnect1();
 			indexSignalIcons = 1;
         }
+		if (GUILayout.Button("Menu"))
+		{
+			Application.LoadLevel("menu");
+		}
 		
-		GUILayout.Space(Screen.width-250);
+		GUILayout.Space(Screen.width-350);
 		GUILayout.Label(signalIcons[(int)indexSignalIcons]);
 		
 		GUILayout.EndHorizontal();

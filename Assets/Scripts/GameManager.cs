@@ -116,16 +116,18 @@ public class GameManager : MonoBehaviour {
 
 	void dayMode() {
 		GameObject[] objects = GameObject.FindGameObjectsWithTag( "Day" );
-		foreach( GameObject go in objects )
-		{
-			go.renderer.enabled = true;
-			go.collider.enabled=true;
+		foreach( GameObject go in objects ) {
+			if(go.renderer)
+				go.renderer.enabled = true;
+			if(go.collider)
+				go.collider.enabled=true;
 		}
 		GameObject[] objects2 = GameObject.FindGameObjectsWithTag( "Night" );
-		foreach( GameObject go in objects2 )
-		{
-			go.renderer.enabled = false;
-			go.collider.enabled=false;
+		foreach( GameObject go in objects2 ) {
+			if(go.collider)
+				go.renderer.enabled = false;
+			if(go.renderer)
+				go.collider.enabled=false;
 		}
 
 		RenderSettings.skybox = skyboxDay;
@@ -136,16 +138,18 @@ public class GameManager : MonoBehaviour {
 	
 	void nightMode() {
 		GameObject[] objects = GameObject.FindGameObjectsWithTag( "Day" );
-		foreach( GameObject go in objects )
-		{
-			go.renderer.enabled = false;
-			go.collider.enabled=false;
+		foreach( GameObject go in objects ){
+			if(go.renderer)
+				go.renderer.enabled = false;
+			if(go.collider)
+				go.collider.enabled=false;
 		}
 		GameObject[] objects2 = GameObject.FindGameObjectsWithTag( "Night" );
-		foreach( GameObject go in objects2 )
-		{
-			go.renderer.enabled = true;
-			go.collider.enabled=true;
+		foreach( GameObject go in objects2 ) {
+			if(go.renderer)
+				go.renderer.enabled = true;
+			if(go.collider)
+				go.collider.enabled=true;
 		}
 		
 		RenderSettings.skybox = skyboxNight;
