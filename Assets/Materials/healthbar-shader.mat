@@ -59,7 +59,7 @@ Material:
       data:
         first:
           name: _BackgroundColor
-        second: {r: .200000003, g: .564705908, b: 0, a: 0}
+        second: {r: .219607845, g: .219607845, b: .219607845, a: 0}
       data:
         first:
           name: _MainColour

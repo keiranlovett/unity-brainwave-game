@@ -7,6 +7,13 @@ public class GameManager : MonoBehaviour {
 	string currentLevel_rough;
 	int currentLevel;
 
+
+	//State assets
+	public Material skyboxDay;
+	public Material skyboxNight;
+	public GameObject lightDay;
+	public GameObject lightNight;
+
 	TGDeviceController controller; 	//Lets call on the ThinkGear Controller class
 	
 	private int poorSignal1;
@@ -79,7 +86,7 @@ public class GameManager : MonoBehaviour {
 		GameObject.Find("Plane").transform.localPosition = new Vector3(0, (rangeAvg/500), 0);
 
 		//STATEs
-		if((rangeCur >= rangeMin && rangeCur < rangeMax) && toggle) {	
+		if((rangeCur >= rangeMin && rangeCur < rangeMax)) {	
 			nightMode();
 		} else {
 			if (toggle) {
@@ -120,6 +127,11 @@ public class GameManager : MonoBehaviour {
 			go.renderer.enabled = false;
 			go.collider.enabled=false;
 		}
+
+		RenderSettings.skybox = skyboxDay;
+		lightDay.light.enabled = true;
+		lightNight.light.enabled = false;
+
 	}
 	
 	void nightMode() {
@@ -135,6 +147,10 @@ public class GameManager : MonoBehaviour {
 			go.renderer.enabled = true;
 			go.collider.enabled=true;
 		}
+		
+		RenderSettings.skybox = skyboxNight;
+		lightDay.light.enabled = false;
+		lightNight.light.enabled = true;
 	}
 
 }
