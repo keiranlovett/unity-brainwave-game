@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		//DEBUG
-		if (Input.GetKeyDown("space")) {
+		if (Input.GetKeyDown(KeyCode.LeftShift)) {
 			toggle = !toggle;
 		}
 
@@ -124,9 +124,9 @@ public class GameManager : MonoBehaviour {
 		}
 		GameObject[] objects2 = GameObject.FindGameObjectsWithTag( "Night" );
 		foreach( GameObject go in objects2 ) {
-			if(go.collider)
-				go.renderer.enabled = false;
 			if(go.renderer)
+				go.renderer.enabled = false;
+			if(go.collider)
 				go.collider.enabled=false;
 		}
 
