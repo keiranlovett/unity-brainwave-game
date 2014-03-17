@@ -1,6 +1,8 @@
 # Nocturnal
 ## GAME DESIGN DOCUMENT
 
+[![ScreenShot](http://b.vimeocdn.com//ts//467//083//467083281_640.jpg)](https://vimeo.com/88580421)
+
 ### Vision Statement
 
 With the growing convergence of consumer growth in medical and wearable technology the BRAINLINK brainwave sensor is setting itself up to become a powerful companion controller to the current generation of smart devices. However, their games are currently lacking in scope and growth. With the current BRAINLINK powered games focused on basic games centered around meditation, NOCTURNAL aims to target those players but in a more organic and challenging environment.* NOCTURNAL** *is a puzzle game for iOS and Android devices that utilizes the BRAINLINK personal brainwave sensor as an additional controller. Using problem solving, players must find their way in a magical forest switching between night and day to solve the puzzles that surround them. NOCTURNAL is focused on simplicity and meditative mechanics, with clean and simple aesthetics and little visual or auditory clutter.   
